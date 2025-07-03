@@ -1,0 +1,44 @@
+<section class="course-container">
+
+    @if(course){
+    <h3>{{course.name}} {{course.description}}</h3>
+    <div class="img-container">
+        <img [src]="course.image" alt="">
+    </div>
+    <h4>Temas que aprenderas 🧙‍♂️</h4>
+    <ol>
+        @for(topic of course.content; track topic){
+        <li>{{ topic }}</li>
+        }
+    </ol>
+    <p><strong>Duración:</strong> {{ course.duration }}</p>
+    <p><strong>Requisitos:</strong></p>
+    <ul>
+        @for (req of course.requirements; track req) {
+        <li>{{ req }}</li>
+        }
+    </ul>
+    <p><strong>Instructor:</strong> {{ course.instructor }}</p>
+
+    <p>
+        <strong>Idioma:</strong> {{ course.language }}
+    </p>
+
+    @if (course.rating) {
+    <p><strong>Rating:</strong> {{ course.rating }} / 5 ⭐</p>}
+
+    <a class="action" routerLink="/courses">
+        <span aria-hidden="true">
+            ←
+        </span> Regresar a cursos
+    </a>
+    }
+
+    @else {
+    <div class="not-found">
+        <p><strong>404</strong>Curso no encontrado :&#40;</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/020/897/446/non_2x/404-not-found-oops-error-page-white-ghost-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg"
+            alt="">
+    </div>
+    }
+</section>

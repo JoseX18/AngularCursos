@@ -1,0 +1,147 @@
+h2 {
+    margin: 20px 0 50px 15px;
+    background: linear-gradient(to right, #4F46E5, #9333EA);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+
+img {
+    width: 250px;
+    object-fit: cover;
+}
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+/* Estilos de cada curso */
+.card {
+    background-color: #F9FAFB;
+    max-width: 300px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid #E5E7EB;
+    margin-bottom: 20px;
+}
+
+.card a {
+    text-decoration: none
+}
+
+.content {
+    padding: 1.1rem;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    background-color: rgb(239, 205, 255);
+}
+
+.title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    align-items: center;
+    gap: 0.25rem;
+    background: linear-gradient(to right, #4F46E5, #9333EA);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+}
+
+.action:hover {
+    background-color: #9333EA;
+
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
+
+.level {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.courses-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+/* Estilos de dificultad */
+.Easy {
+    color: #22C55E;
+}
+
+.Medium {
+    color: #FACC15;
+}
+
+.Hard {
+    color: #EF4444;
+}

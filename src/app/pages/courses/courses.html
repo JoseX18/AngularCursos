@@ -1,0 +1,27 @@
+<section>
+    <h2>Listado de Cursos</h2>
+    <div class="courses-section">
+        @for(course of courses; track course.id){
+        <div class="card">
+            <div class="image"><img class="image" [src]="course.image" alt="imagen HTMl"></div>
+            <div class="content">
+                <a (click)="showDetailCourse(course.id)">
+                    <span class="title">{{course.name}} <i class="level {{course.level}}">{{course.level}}</i></span>
+                </a>
+
+                <p class="desc">
+                    {{course.description}}
+                    <b>{{course.price}}</b>
+                </p>
+
+
+                <a class="action" (click)="showDetailCourse(course.id)">
+                    Mostrar tabla de contenido <span aria-hidden="true">
+                        →
+                    </span>
+                </a>
+            </div>
+        </div>
+        }
+    </div>
+</section>

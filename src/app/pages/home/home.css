@@ -1,0 +1,9 @@
+h2 {
+    margin: 20px 0 30px 15px;
+    background: linear-gradient(to right, #4F46E5, #9333EA);
+    background-clip: text;
+    text-align: center;
+    font-size: 30px;
+    -webkit-text-fill-color: transparent;
+    padding-top: 15px;
+}
